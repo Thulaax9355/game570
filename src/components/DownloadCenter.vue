@@ -79,7 +79,7 @@ onMounted(() => {
         <div class="app-card">
           <img
             class="app-icon"
-            src="/app-icon.svg"
+            src="/app-icon.png"
             itemprop="image"
             alt="570游戏中心"
           >
