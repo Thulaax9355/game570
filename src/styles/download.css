@@ -1,0 +1,278 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+}
+
+.download-page {
+    margin: 0;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #e2e8f0;
+    background: radial-gradient(circle at 20% 10%, #1d4ed8 0%, transparent 35%),
+                radial-gradient(circle at 80% 90%, #0f766e 0%, transparent 35%),
+                linear-gradient(160deg, #020617 0%, #0b1120 55%, #111827 100%);
+}
+
+button {
+    cursor: pointer;
+    font: inherit;
+}
+
+.layout {
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+    padding: 64px 20px 80px;
+    width: min(1080px, 100%);
+}
+
+.bg-glow {
+    position: fixed;
+    z-index: 1;
+    border-radius: 999px;
+    filter: blur(80px);
+    opacity: .35;
+    pointer-events: none;
+}
+
+.bg-glow-1 {
+    top: -120px;
+    left: -80px;
+    width: 280px;
+    height: 280px;
+    background: #60a5fa;
+}
+
+.bg-glow-2 {
+    right: -100px;
+    bottom: -120px;
+    width: 320px;
+    height: 320px;
+    background: #2dd4bf;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.tag {
+    display: inline-block;
+    margin: 0;
+    padding: 6px 12px;
+    border: 1px solid rgba(148, 163, 184, .4);
+    border-radius: 999px;
+    background: rgba(15, 23, 42, .5);
+    color: #93c5fd;
+    font-size: 12px;
+    letter-spacing: .08em;
+}
+
+.title {
+    margin: 16px 0 8px;
+    font-size: clamp(34px, 6vw, 52px);
+    line-height: 1.1;
+    color: #f8fafc;
+}
+
+.lead {
+    margin: 0 auto;
+    max-width: 660px;
+    color: #94a3b8;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.download-panel {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 16px;
+    margin-top: 34px;
+}
+
+.app-card,
+.action-card,
+.block {
+    border: 1px solid rgba(148, 163, 184, .25);
+    border-radius: 20px;
+    background: rgba(15, 23, 42, .66);
+    backdrop-filter: blur(8px);
+}
+
+.app-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 28px;
+}
+
+.app-icon {
+    width: 92px;
+    height: 92px;
+    border-radius: 22px;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, .6);
+}
+
+.meta h2 {
+    margin: 0 0 8px;
+    color: #f8fafc;
+    font-size: 28px;
+}
+
+.version,
+.date {
+    margin: 4px 0;
+    color: #cbd5e1;
+    font-size: 15px;
+}
+
+.action-card {
+    padding: 24px;
+    text-align: center;
+}
+
+.action-card button {
+    width: 100%;
+    border: 0;
+    border-radius: 14px;
+    padding: 14px 16px;
+    color: #061124;
+    font-weight: 700;
+    font-size: 17px;
+    background: linear-gradient(135deg, #38bdf8 0%, #2dd4bf 100%);
+    box-shadow: 0 10px 24px rgba(45, 212, 191, .25);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.action-card button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 30px rgba(45, 212, 191, .35);
+}
+
+.action-card p {
+    margin: 12px 0 16px;
+    color: #94a3b8;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.qr-wrap {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.qr-wrap canvas {
+    width: 112px;
+    height: 112px;
+    border-radius: 10px;
+    padding: 8px;
+    background: #f8fafc;
+}
+
+.qr-wrap span {
+    color: #bfdbfe;
+    font-size: 12px;
+}
+
+.badge-row {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, .35);
+    background: rgba(15, 23, 42, .5);
+    color: #cbd5e1;
+    font-size: 13px;
+    letter-spacing: .02em;
+}
+
+.info-grid {
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.block {
+    padding: 22px;
+}
+
+.block h3 {
+    margin: 0 0 14px;
+    color: #f8fafc;
+    font-size: 18px;
+}
+
+.feature ul,
+.steps ol {
+    margin: 0;
+    padding-left: 20px;
+    color: #cbd5e1;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.faq {
+    margin-top: 16px;
+}
+
+.faq-item + .faq-item {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px dashed rgba(148, 163, 184, .25);
+}
+
+.faq-item h4 {
+    margin: 0 0 8px;
+    font-size: 15px;
+    color: #e2e8f0;
+}
+
+.faq-item p {
+    margin: 0;
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.footer {
+    margin-top: 22px;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    color: #64748b;
+    font-size: 12px;
+}
+
+@media (max-width: 920px) {
+    .download-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .app-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .qr-wrap {
+        display: none;
+    }
+}
