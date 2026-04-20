@@ -24,7 +24,7 @@ function download(): void {
   }
 
   if (!window.location.href.includes('android') && /Windows/i.test(userAgent)) {
-    window.location.href = '/game.zip'
+    window.location.href = 'https://1674689971-1330588703.cos.ap-hongkong.myqcloud.com/game.zip'
     return
   }
 
